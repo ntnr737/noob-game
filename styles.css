@@ -1,0 +1,293 @@
+:root {
+  --bg: #fff8ef;
+  --card: #ffffff;
+  --primary: #ef5a23;
+  --primary-dark: #d44917;
+  --text: #1f1f1f;
+  --muted: #6c6c6c;
+  --border: #f0e3d4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 248, 239, 0.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 72px;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: var(--text);
+}
+
+nav {
+  display: flex;
+  gap: 1.4rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+}
+
+.hero,
+.section,
+.cta {
+  padding: 4rem 0;
+}
+
+.hero-grid,
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.story-grid {
+  align-items: start;
+}
+
+.tag {
+  display: inline-block;
+  background: #ffe7b5;
+  color: #684613;
+  padding: 0.3rem 0.7rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  margin-bottom: 0.7rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+h1 span {
+  color: var(--primary);
+}
+
+.hero-copy p,
+.section-head p {
+  color: var(--muted);
+}
+
+.hero-cta {
+  margin: 1.3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.75rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-ghost {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: white;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.hero-card,
+.product-card,
+.brand-box,
+.benefit,
+blockquote {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 7px 22px rgba(38, 27, 12, 0.05);
+}
+
+.hero-card,
+.product-card,
+.brand-box,
+blockquote,
+.benefit {
+  padding: 1.2rem;
+}
+
+.flavor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.flavor-list span {
+  font-size: 0.9rem;
+  background: #fff5dd;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+}
+
+.alt {
+  background: #fff1df;
+}
+
+.section-head {
+  max-width: 700px;
+  margin-bottom: 1.4rem;
+}
+
+.product-grid,
+.benefit-grid,
+.testimonial-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.product-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.product-card h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link {
+  margin-top: 0.6rem;
+  color: var(--primary-dark);
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.brand-box ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.benefit-grid,
+.testimonial-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.cta-wrap {
+  text-align: center;
+  background: linear-gradient(130deg, #ffe2b9, #fff);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  padding: 2rem;
+}
+
+.footer {
+  background: #1f1309;
+  color: #f9ecd9;
+  padding: 2rem 0 1rem;
+}
+
+.footer a {
+  color: #f9ecd9;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 1rem;
+  color: #d1bca0;
+}
+
+@media (max-width: 850px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: #fff8ef;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav a {
+    padding: 0.8rem 4%;
+    border-top: 1px solid var(--border);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hero-grid,
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+}
